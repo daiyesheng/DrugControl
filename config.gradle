@@ -1,0 +1,160 @@
+ext {
+
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    signing = [
+            keyAlias: "drugcontrol",
+            keyPassword: "123456",
+            storePassword    : "123456",
+    ]
+
+    // lib version
+    kotlin_version = '1.3.10'
+    androidSupportSdkVersion = '28.0.0'
+    retrofitSdkVersion = '2.6.0'
+    dagger2SdkVersion = '2.23.2'
+    glideSdkVersion = '4.9.0'
+    butterknifeSdkVersion = '10.2.0'
+    rxlifecycle2SdkVersion = '2.2.2'
+    autodispose = '1.4.0'
+    espressoSdkVersion = '3.0.1'
+    canarySdkVersion = '1.6.3'
+    smartrefreshVersion = '1.1.0'
+
+    dep = [
+            plugin                  : [
+                    "com.android.tools.build:gradle:3.5.0",
+                    "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
+            ],
+            //androidx
+            androidxAppcompat       : "androidx.appcompat:appcompat:1.1.0",
+            androidxSupportV4       : "androidx.legacy:legacy-support-v4:1.0.0",
+            androidxMaterialDesign       : "com.google.android.material:material:1.0.0",
+            androidxRecyclerview       : "androidx.recyclerview:recyclerview:1.0.0",
+            androidxConstraintlayout: "androidx.constraintlayout:constraintlayout:1.1.3",
+
+            //support
+            appcompatV7             : "com.android.support:appcompat-v7:$androidSupportSdkVersion",
+            design                  : "com.android.support:design:$androidSupportSdkVersion",
+            supportV4               : "com.android.support:support-v4:$androidSupportSdkVersion",
+            cardviewV7              : "com.android.support:cardview-v7:$androidSupportSdkVersion",
+            annotations             : "com.android.support:support-annotations:$androidSupportSdkVersion",
+            recyclerviewV7          : "com.android.support:recyclerview-v7:$androidSupportSdkVersion",
+
+            //network
+            retrofit                : "com.squareup.retrofit2:retrofit:$retrofitSdkVersion",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$retrofitSdkVersion",
+            retrofitAdapterRxjava   : "com.squareup.retrofit2:adapter-rxjava:$retrofitSdkVersion",
+            retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$retrofitSdkVersion",
+            okhttp3                 : "com.squareup.okhttp3:okhttp:3.12.3",
+            okhttp4                 : "com.squareup.okhttp3:okhttp:4.0.0",
+            okhttpUrlconnection     : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            glide                   : "com.github.bumptech.glide:glide:$glideSdkVersion",
+            glideCompiler           : "com.github.bumptech.glide:compiler:$glideSdkVersion",
+            glideLoaderOkhttp3      : "com.github.bumptech.glide:okhttp3-integration:$glideSdkVersion",
+            glideTransformations      : "jp.wasabeef:glide-transformations:2.0.1",
+            picasso                 : "com.squareup.picasso:picasso:2.5.2",
+
+            //view
+            butterknife             : "com.jakewharton:butterknife:$butterknifeSdkVersion",
+            butterknifeCompiler     : "com.jakewharton:butterknife-compiler:$butterknifeSdkVersion",
+            pickerview              : "com.contrarywind:Android-PickerView:3.2.5",
+            photoview               : "com.github.chrisbanes.photoview:library:1.2.3",
+            numberprogressbar       : "com.daimajia.numberprogressbar:library:1.2@aar",
+            nineoldandroids         : "com.nineoldandroids:library:2.4.0",
+            paginate                : "com.github.markomilos:paginate:0.5.1",
+            vlayout                 : "com.alibaba.android:vlayout:1.1.0@aar",
+            autosize                : "me.jessyan:autosize:1.1.2",
+
+            //others
+            xrecyclerview                : "com.jcodecraeer:xrecyclerview:1.6.0",
+            //代替SharePreference 基于ContentProvider
+            tray                : "net.grandcentrix.tray:tray:0.12.0",
+            //UI简洁，交互优雅的通用弹窗！可以替代Dialog，PopupWindow，PopupMenu，BottomSheet，DrawerLayout，Spinner等组件
+            //implementation 'com.lxj:xpopup:1.8.10'
+            ////for androidx.
+            //implementation 'com.lxj:xpopup:1.8.10-x'
+            // 版本号在26以及以上即可
+            //implementation 'com.android.support:appcompat-v7:28.0.0'
+            //implementation 'com.android.support:recyclerview-v7:28.0.0'
+            //implementation 'com.android.support:design:28.0.0'
+            xpopup                : "com.lxj:xpopup:1.8.10-x",
+//            implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.4'
+            pictureSelector                : "com.github.LuckSiege.PictureSelector:picture_library:v2.2.4",
+//            implementation 'com.blankj:utilcode:1.25.9'
+//            // if u use AndroidX, use the following
+//            implementation 'com.blankj:utilcodex:1.25.9'
+            androidUtilCodex :"com.blankj:utilcodex:1.25.9",
+
+            smartRefreshLayout :"com.scwang.smartrefresh:SmartRefreshLayout:$smartrefreshVersion",//1.0.5及以前版本的老用户升级需谨慎，API改动过大
+            smartRefreshHeader :"com.scwang.smartrefresh:SmartRefreshHeader:$smartrefreshVersion",//没有使用特殊Header，可以不加这行
+
+            baseRecyclerViewAdapterHelper :"com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47",//优化Adapter代码（减少百分之70%代码）
+
+            SVGAPlayerAndroid :"com.github.yyued:SVGAPlayer-Android:2.4.7",//SVGAPlayer 是一个轻量的动画渲染库
+
+            //Bilibili/ijkplayer 视频播放框架 https://github.com/Bilibili/ijkplayer
+            ijkplayerJava :"tv.danmaku.ijk.media:ijkplayer-java:0.8.8",
+            ijkplayerArmv7a :"tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8",
+
+
+            //rx2
+            rxandroid2              : "io.reactivex.rxjava2:rxandroid:2.1.1",
+            rxjava2                 : "io.reactivex.rxjava2:rxjava:2.2.12",
+            rxlifecycle2            : "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle2SdkVersion",
+            rxlifecycle2Android     : "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle2SdkVersion",
+            rxlifecycle2Components  : "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle2SdkVersion",
+            rxcache2                : "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x",
+            rxpermissions2          : "com.github.tbruyelle:rxpermissions:0.10.2",
+            rxerrorhandler2         : "me.jessyan:rxerrorhandler:2.1.1",
+
+
+            // AutoDispose
+            autodispose         : "com.uber.autodispose:autodispose:$autodispose",
+            autodisposeAndroid         : "com.uber.autodispose:autodispose-android:$autodispose",
+            autodisposeArchcomponents         : "com.uber.autodispose:autodispose-android-archcomponents:$autodispose",
+
+            //tools
+            kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            dagger2                 : "com.google.dagger:dagger:$dagger2SdkVersion",
+            dagger2Android          : "com.google.dagger:dagger-android:$dagger2SdkVersion",
+            dagger2AndroidSupport   : "com.google.dagger:dagger-android-support:$dagger2SdkVersion",
+            dagger2Compiler         : "com.google.dagger:dagger-compiler:$dagger2SdkVersion",
+            dagger2AndroidProcessor : "com.google.dagger:dagger-android-processor:$dagger2SdkVersion",
+            androideventbus         : "org.simple:androideventbus:1.0.5.1",
+            eventbus                : "org.greenrobot:eventbus:3.1.1",
+            otto                    : "com.squareup:otto:1.3.8",
+            gson                    : "com.google.code.gson:gson:2.8.5",
+            multidex                : "com.android.support:multidex:1.0.3",
+            javaxAnnotation         : "javax.annotation:jsr250-api:1.0",
+            arouter                 : "com.alibaba:arouter-api:1.3.1",
+            arouterCompiler         : "com.alibaba:arouter-compiler:1.1.4",
+            progressmanager         : "me.jessyan:progressmanager:1.5.0",
+            retrofitUrlManager      : "me.jessyan:retrofit-url-manager:1.4.0",
+            lifecyclemodel          : "me.jessyan:lifecyclemodel:1.0.1",
+
+            //test
+            junit                   : "junit:junit:4.12",
+            androidJUnitRunner      : "android.support.test.runner.AndroidJUnitRunner",
+            runner                  : "com.android.support.test:runner:1.0.1",
+            espressoCore            : "com.android.support.test.espresso:espresso-core:$espressoSdkVersion",
+            espressoContrib         : "com.android.support.test.espresso:espresso-contrib:$espressoSdkVersion",
+            espressoIntents         : "com.android.support.test.espresso:espresso-intents:$espressoSdkVersion",
+            mockitoCore             : "org.mockito:mockito-core:1.+",
+            timber                  : "com.jakewharton.timber:timber:4.7.1",
+            logger                  : "com.orhanobut:logger:2.2.0",
+            canaryDebug             : "com.squareup.leakcanary:leakcanary-android:$canarySdkVersion",
+            canaryRelease           : "com.squareup.leakcanary:leakcanary-android-no-op:$canarySdkVersion",
+            robolectric             : "org.robolectric:robolectric:3.1.2",
+            //androidx test
+            androidxRunner          : "androidx.test:runner:1.2.0",
+            androidxEspressoCore    : "androidx.test.espresso:espresso-core:3.2.0",
+    ]
+}

@@ -1,0 +1,299 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <!--RecyclerView的divider配置，覆盖系统的divider，具体使用地方在com.wanxun.maker.view.DividerItemDecoration下读取 android.R.attr.listDivider中-->
+        <item name="android:listDivider">@drawable/divider_recyclerview</item>
+        <!--覆盖系统的actionBarSize-->
+        <item name="actionBarSize">@dimen/mActionBarSize</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!--无标题栏主题 约定统一使用该主题-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--使用该主题后Toolbar和导航栏（Android5.0+）都将透明-->
+    <style name="AppTheme.NoActionBar.StatusTransparent">
+        <item name="colorPrimary">@color/transparentColor</item>
+        <item name="colorPrimaryDark">@color/transparentColor</item>
+    </style>
+
+    <!--toobar字体大小-->
+    <style name="MenuTextStyle">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--toolbar标题文字颜色-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <!--toolbar Menu文字颜色大小-->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="toolbarNavigationButtonStyle">@style/Widget.Toolbar.Button.Navigation</item>
+    </style>
+
+    <style name="Widget.Toolbar.Button.Navigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <!-- navigation icon width -->
+        <item name="android:minWidth">@dimen/mActionBarSize</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- 通用布局 -->
+    <!--宽高全展开-->
+    <style name="layout_allFilled_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!--宽高全包裹-->
+    <style name="layout_allWraped_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--宽展开 高包裹-->
+    <style name="layout_widthfilled_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--高展开 宽包裹-->
+    <style name="layout_heightfilled_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!--item的布局-->
+    <style name="item_startup_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/layout_Margin_15</item>
+        <item name="android:paddingRight">@dimen/layout_Margin_15</item>
+        <item name="android:paddingTop">@dimen/layout_Margin_10</item>
+        <item name="android:paddingBottom">@dimen/layout_Margin_10</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- 页面菜单条目 -->
+    <style name="item_layout">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+    <!--所有item的左边icon样式-->
+    <style name="item_img_style">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!--标题字体 较少用-->
+    <style name="item_tv_title_style" parent="@style/layout_allWraped_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/item_tv_color_01</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--一级字体-->
+    <style name="item_tv_style" parent="@style/layout_allWraped_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/item_tv_color_01</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/item_tv_color_02</item>
+    </style>
+    <!--二级字体-->
+    <style name="item_tv_second_style" parent="@style/layout_allWraped_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/item_tv_color_01</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--三级字体-->
+    <style name="item_tv_third_style" parent="@style/layout_allWraped_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/item_tv_color_02</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--普通3.5字体-->
+    <style name="item_tv_normal_style" parent="@style/layout_allWraped_style">
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">@color/item_tv_color_01</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+    <!--四级字体-->
+    <style name="item_tv_forth_style" parent="@style/layout_allWraped_style">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/item_tv_color_02</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="checkbox" parent="@style/item_tv_normal_style">
+        <item name="android:layout_width">@dimen/dp_52</item>
+        <item name="android:layout_height">@dimen/dp_26</item>
+        <item name="android:background">@drawable/check_box_custom_systemmsg</item>
+        <item name="android:button">@null</item>
+        <item name="android:checked">false</item>
+    </style>
+    <!--全局按钮样式-->
+    <style name="btn_style" parent="item_tv_style">
+        <item name="android:background">@drawable/common_btn_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/item_tv_color_01</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--分割线样式 宽度沾满屏幕-->
+    <style name="line_style">
+        <item name="android:background">@color/line_color</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <!--分割线样式 高度沾满屏幕-->
+    <style name="line2_style">
+        <item name="android:background">@color/line_color</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/line_height</item>
+    </style>
+
+    <!--普通的Edittext style-->
+    <style name="item_ed_style" parent="@style/item_tv_normal_style">
+        <item name="android:background">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:drawablePadding">@dimen/layout_Margin_10</item>
+        <item name="android:textColorHint">@color/item_tv_color_03</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!--所有列表item的右侧箭头-->
+    <style name="arrows">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:src">@drawable/ic_arrows</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--主页TabLayout的样式-->
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabBackground">@drawable/menu_bg_selector</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabMinWidth">?attr/listPreferredItemHeight</item>
+        <item name="tabGravity">fill</item>
+    </style>
+
+    <!--主页TabLayout字体没点击下颜色-->
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/tab_color_normal</item>
+    </style>
+
+    <!--侧滑菜单栏我的收藏样式-->
+    <style name="MyCollectionTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabSelectedTextColor">@color/item_tv_color_01</item>
+        <item name="tabBackground">@drawable/menu_bg_selector</item>
+        <item name="tabTextAppearance">@style/MyCollectionTabTextAppearance</item>
+        <item name="tabMinWidth">?attr/listPreferredItemHeight</item>
+        <item name="tabGravity">fill</item>
+    </style>
+
+    <style name="videoSectionTab" parent="MyCollectionTabLayout">
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+        <item name="tabMaxWidth">100dp</item>
+    </style>
+
+    <style name="NewsAndNoticeTab" parent="videoSectionTab">
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+        <item name="tabTextAppearance">@style/NewsAndNoticeTabTextAppearance</item>
+    </style>
+
+    <style name="NewsAndNoticeTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/item_tv_color_01</item>
+    </style>
+
+    <!--我的收藏TabLayout字体没点击下颜色-->
+    <style name="MyCollectionTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/item_tv_color_02</item>
+    </style>
+
+    <!-- 自定义颜色进度条-->
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+    </style>
+
+    <!--PictureSelector 2.0 theme style-->
+    <style name="pictureseleted" parent="AppTheme">
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture.statusFontColor">false</item>
+        <!--返回键图标-->
+        <item name="picture.leftBack.icon">@drawable/back_btn</item>
+        <!--标题下拉箭头-->
+        <item name="picture.arrow_down.icon">@drawable/arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture.arrow_up.icon">@drawable/arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture.title.textColor">@color/white</item>
+        <!--标题栏右边文字-->
+        <item name="picture.right.textColor">@color/white</item>
+        <!--图片列表勾选样式-->
+        <item name="picture.checked.style">@drawable/picture_checkbox_selector</item>
+        <!--开启图片列表勾选数字模式-->
+        <item name="picture.style.checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture.style.numComplete">false</item>
+        <!--图片列表底部背景色-->
+        <item name="picture.bottom.bg">@color/windowBackground</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture.preview.textColor">@color/picture_list_text_color</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture.complete.textColor">@color/picture_list_text_color</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture.ac_preview.title.textColor">@color/white</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture.ac_preview.complete.textColor">@color/picture_preview_text_color</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture.ac_preview.title.bg">@color/colorPrimary</item>
+        <!--预览界面底部背景色-->
+        <item name="picture.ac_preview.bottom.bg">@color/windowBackground</item>
+        <!--预览界面返回箭头-->
+        <item name="picture.preview.leftBack.icon">@drawable/back_btn</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture.crop.toolbar.bg">@color/colorPrimary</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture.crop.status.color">@color/windowBackground</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture.crop.title.color">@color/white</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
+    </style>
+
+
+</resources>

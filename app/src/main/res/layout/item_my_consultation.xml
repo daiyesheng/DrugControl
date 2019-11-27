@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_widthfilled_style"
+    android:background="@drawable/item_stroke_selector"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:layout_marginTop="@dimen/dp_4"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:src="@drawable/tags"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/item_tv_second_style"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        tools:text="赵科" />
+
+    <TextView
+        android:id="@+id/tvTag"
+        style="@style/item_tv_normal_style"
+        tools:text="心理专家"
+        android:layout_toRightOf="@+id/tvName"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"/>
+
+    <TextView
+        android:id="@+id/tvCompany"
+        style="@style/item_tv_forth_style"
+        tools:text="平安（广州）互联网医院"
+        android:layout_below="@+id/tvName"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/item_tv_color_01"/>
+
+    <TextView
+        android:id="@+id/tvProfession"
+        style="@style/item_tv_forth_style"
+        tools:text="擅长：擅长诊断心里疾病及疑似吸毒心里郁抑症等有关疾病，提供咨询服务。"
+        android:layout_below="@+id/tvCompany"
+        android:singleLine="false"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/tvPatient"
+        style="@style/item_tv_normal_style"
+        tools:text="就诊人：赵成瑞 28岁 男"
+        android:layout_below="@+id/tvProfession"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/item_tv_forth_style"
+        tools:text="2019.08.15 15:30"
+        android:layout_below="@+id/tvProfession"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_12"/>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/line_style"
+        android:layout_below="@+id/tvPatient"
+        android:layout_marginTop="@dimen/dp_10" />
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_below="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        tools:text="查看咨询记录"
+        android:clickable="false"
+        android:text="@string/checked_con_record"
+        style="@style/btn_style" />
+
+</RelativeLayout>

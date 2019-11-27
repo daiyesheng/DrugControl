@@ -1,0 +1,90 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--允许绘制状态栏-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <!-- Status Bar -->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorControlHighlight">@color/line_color</item>
+        <!-- 标题颜色-->
+        <item name="android:textColorPrimary">@color/item_tv_color_01</item>
+        <!-- 菜单项点击selector-->
+        <!--<item name="actionBarItemBackground">@drawable/bg_select</item>-->
+        <item name="android:selectableItemBackground">@drawable/item_bg_default_selector</item>
+        <item name="selectableItemBackground">@drawable/item_bg_default_selector</item>
+        <!--Navigation bar color-->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="actionBarStyle">@style/AppTheme.AppBarOverlay</item>
+        <!--RecyclerView的divider配置，覆盖系统的divider，具体使用地方在com.wanxun.maker.view.DividerItemDecoration下读取 android.R.attr.listDivider中-->
+        <item name="android:listDivider">@drawable/divider_recyclerview</item>
+        <!--覆盖系统的actionBarSize-->
+        <item name="android:actionBarSize">@dimen/mActionBarSize</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!--使用该主题后Toolbar和导航栏（Android5.0+）都将透明-->
+    <style name="AppTheme.NoActionBar.StatusTransparent">
+        <item name="android:statusBarColor">@color/transparentColor</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimary">@color/transparentColor</item>
+        <item name="colorPrimaryDark">@color/transparentColor</item>
+    </style>
+
+    <!--toobar字体大小-->
+    <style name="MenuTextStyle">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--去掉阴影-->
+        <!-- remove shadow below action bar -->
+        <item name="android:elevation">0dp</item>
+        <!-- Support library compatibility -->
+        <item name="elevation">0dp</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <!--toolbar标题文字颜色-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/windowBackground</item>
+        <!--toolbar Menu文字颜色大小-->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="toolbarNavigationButtonStyle">@style/Widget.Toolbar.Button.Navigation</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <!-- 页面菜单条目 -->
+    <style name="item_layout">
+        <item name="android:background">@drawable/item_bg_default_selector</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <!-- 页面菜单条目2  white-->
+    <style name="item_layout2">
+        <item name="android:background">@drawable/item_bg_window_selector</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+    <!-- 页面菜单条目3  弧角-->
+    <style name="item_layout3">
+        <item name="android:background">@drawable/item_bg_corner_selector</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+</resources>

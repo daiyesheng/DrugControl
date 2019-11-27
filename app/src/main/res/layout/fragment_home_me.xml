@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_134"
+            android:background="@color/windowBackground"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                android:id="@+id/ll_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical">
+
+                <com.example.drugcontrol.widget.MaskImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="@dimen/dp_74"
+                    android:layout_height="@dimen/dp_74"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tvEditable"
+                    style="@style/item_tv_third_style"
+                    android:layout_below="@+id/ivAvatar"
+                    android:layout_marginTop="-10dp"
+                    android:background="@drawable/btn_window_coner_shape"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textColor="@color/item_tv_color_01"
+                    android:paddingRight="@dimen/dp_10"
+                    android:text="@string/editable" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ll_avatar"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_60"
+                android:background="@drawable/item_bg_window_selector"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    style="@style/item_tv_second_style"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="@string/tvUserName" />
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    style="@style/item_tv_third_style"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_gravity="left"
+                    android:text="@string/level_normal" />
+
+            </LinearLayout>
+            <com.example.drugcontrol.widget.MaskImageView
+                android:id="@+id/tvUserSetting"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@mipmap/ic_launcher" />
+
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_86"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_14"
+            android:background="@drawable/item_bg_corner_shape"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rb_consultation"
+                style="@style/item_tv_third_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/item_bg_window_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/comui_tab_home"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:textColor="@color/item_tv_color_01"
+                android:padding="10dp"
+                android:text="@string/me_consultation" />
+
+            <RadioButton
+                android:id="@+id/rb_experter"
+                style="@style/item_tv_third_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_bg_window_selector"
+                android:button="@null"
+                android:textColor="@color/item_tv_color_01"
+                android:drawableTop="@drawable/comui_tab_home"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/me_experter" />
+
+            <RadioButton
+                android:id="@+id/rb_reporter"
+                style="@style/item_tv_third_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/item_bg_window_selector"
+                android:button="@null"
+                android:textColor="@color/item_tv_color_01"
+                android:drawableTop="@drawable/comui_tab_home"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/me_reporter" />
+
+            <RadioButton
+                android:id="@+id/rb_suggestion"
+                style="@style/item_tv_third_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_weight="1"
+                android:textColor="@color/item_tv_color_01"
+                android:background="@drawable/item_bg_window_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/comui_tab_home"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/me_suggestion" />
+
+        </RadioGroup>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_myfile"
+            style="@style/item_layout3"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/my_file"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/back_btn"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="@color/item_tv_color_01" />
+
+            <ImageView
+                style="@style/arrows"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_myappointment"
+            style="@style/item_layout3"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/my_appointment"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/back_btn"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="@color/item_tv_color_01" />
+
+            <ImageView
+                style="@style/arrows"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_myworker"
+            style="@style/item_layout3"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/my_worker"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/back_btn"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="@color/item_tv_color_01" />
+
+            <ImageView
+                style="@style/arrows"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tester"
+            style="@style/item_layout3"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/my_tester"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/back_btn"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="@color/item_tv_color_01" />
+
+            <ImageView
+                style="@style/arrows"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

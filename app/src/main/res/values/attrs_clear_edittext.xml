@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="clearEditText">
+        <!--设置下划线-->
+        <attr name="edittext_underline" format="boolean" />
+        <!--设置下划线颜色-->
+        <attr name="edittext_underline_color" format="color" />
+        <!--是否显示清除按钮-->
+        <attr name="edittext_clear_icon" format="boolean" />
+        <!--指定drawable的宽和高-->
+        <attr name="compoundDrawableWidth" format="dimension" />
+        <attr name="compoundDrawableHeight" format="dimension" />
+    </declare-styleable>
+
+</resources>

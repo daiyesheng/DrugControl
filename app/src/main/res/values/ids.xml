@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="NO_RES" type="id" />
+    <item name="NO_ICON" type="id" />
+
+
+    <item name="srlBaseHttpRecycler" type="id"/>
+    <item name="rvBaseRecycler" type="id"/>
+
+</resources>

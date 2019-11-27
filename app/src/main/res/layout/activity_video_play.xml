@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/layout_allFilled_style"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.VideoPlayActivity">
+
+    <com.example.drugcontrol.widget.ScaleFrameLayout
+        android:id="@+id/layoutVideo"
+        style="@style/layout_widthfilled_style"
+        app:expectH="216"
+        app:expectW="375">
+
+        <TextureView
+            android:id="@+id/textureView"
+            style="@style/layout_allFilled_style" />
+
+        <ImageView
+            android:id="@+id/imgVideoCover"
+            style="@style/layout_allFilled_style"
+            android:visibility="gone"
+            android:scaleType="fitXY" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/ProgressBar_Mini"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:progressDrawable="@drawable/progressbar_green" />
+
+        <FrameLayout
+            android:id="@+id/layoutVideoInfo"
+            style="@style/layout_allFilled_style"
+            android:background="@color/black_25"
+            tools:visibility="visible"
+            android:visibility="gone">
+
+            <LinearLayout
+                style="@style/layout_widthfilled_style"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/layout_Margin_10"
+                android:paddingRight="@dimen/layout_Margin_10">
+
+                <TextView
+                    android:id="@+id/tvVideoCurTime"
+                    style="@style/item_tv_forth_style"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_10" />
+
+                <SeekBar
+                    android:id="@+id/mSeekBarVideo"
+                    style="@style/layout_widthfilled_style"
+                    android:layout_weight="1"
+                    android:progressTint="@color/white"
+                    android:secondaryProgressTint="@color/black"
+                    android:thumbTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvVideoTotalTime"
+                    style="@style/item_tv_forth_style"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_10" />
+
+                <ImageView
+                    android:id="@+id/imgVideoExpand"
+                    style="@style/item_img_style"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="@dimen/layout_Margin_5"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_video_expand"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imgBack"
+            style="@style/item_img_style"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="@dimen/layout_Margin_12"
+            android:src="@drawable/back_half_transparent_bg" />
+
+        <RelativeLayout style="@style/layout_allFilled_style">
+
+            <ImageView
+                android:id="@+id/imgPlay"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/selector_play_circle" />
+
+            <TextView
+                android:id="@+id/tvTitles"
+                style="@style/item_tv_third_style"
+                android:layout_below="@+id/imgPlay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/layout_Margin_10"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_marginTop="@dimen/layout_Margin_10"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/layout_Margin_5"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textColor="@color/white"
+                tools:visibility="visible"
+                tools:text="title"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.example.drugcontrol.widget.ScaleFrameLayout>
+
+
+</LinearLayout>

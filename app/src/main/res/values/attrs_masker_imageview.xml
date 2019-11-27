@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SelectorAttrs">
+        <!-- selector相关属性-->
+        <!-- 背景状态 -->
+        <attr name="sel_background_pressed" format="reference|color" />
+        <attr name="sel_background_selected" format="reference|color" />
+        <attr name="sel_background_disable" format="reference|color" />
+
+        <!-- 背景形状 -->
+        <attr name="sel_background_shape" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+        <!-- 背景圆角 -->
+        <attr name="sel_background_corners" format="dimension" />
+        <attr name="sel_background_corner_topLeft" format="dimension" />
+        <attr name="sel_background_corner_topRight" format="dimension" />
+        <attr name="sel_background_corner_bottomLeft" format="dimension" />
+        <attr name="sel_background_corner_bottomRight" format="dimension" />
+
+        <!-- 背景边框默认状态 -->
+        <attr name="sel_background_border_color" format="color" />
+        <attr name="sel_background_border_width" format="dimension" />
+        <!-- 背景边框状态 -->
+        <attr name="sel_background_border_pressed" format="color" />
+        <attr name="sel_background_border_selected" format="color" />
+        <attr name="sel_background_border_disable" format="color" />
+
+        <!-- ripple水波纹效果-->
+        <attr name="sel_background_ripple" format="reference|color" />
+        <attr name="sel_background_ripple_mask" format="reference|color" />
+        <!-- ripple mask形状(仅在sel_background_ripple_mask为color时生效)-->
+        <attr name="sel_background_ripple_mask_shape" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+        <!-- ripple mask圆角 -->
+        <attr name="sel_background_ripple_mask_corners" format="dimension" />
+        <attr name="sel_background_ripple_mask_corner_topLeft" format="dimension" />
+        <attr name="sel_background_ripple_mask_corner_topRight" format="dimension" />
+        <attr name="sel_background_ripple_mask_corner_bottomLeft" format="dimension" />
+        <attr name="sel_background_ripple_mask_corner_bottomRight" format="dimension" />
+
+        <!--该属性已过时，被废弃-->
+        <attr name="sel_background" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="MaskImageView">
+        <!-- 遮罩的层面:背景\前景图-->
+        <attr name="miv_mask_level" format="enum">
+            <enum name="background" value="1" />
+            <enum name="foreground" value="2" />
+        </attr>
+        <!-- 设置了setClickable(true)才生效,默认开启遮罩-->
+        <attr name="miv_is_show_mask_on_click" format="boolean" />
+        <attr name="miv_mask_color" format="color" />
+        <!--是否忽略图片的透明度，默认为true,透明部分不显示遮罩 -->
+        <attr name="miv_is_ignore_alpha" format="boolean" />
+        <!--按下时view的透明度-->
+        <attr name="miv_pressed_alpha" format="float" />
+
+        <attr name="sel_background" />
+        <attr name="sel_background_pressed" />
+        <attr name="sel_background_selected" />
+        <attr name="sel_background_disable" />
+        <attr name="sel_background_shape" />
+        <attr name="sel_background_corners" />
+        <attr name="sel_background_corner_topLeft" />
+        <attr name="sel_background_corner_topRight" />
+        <attr name="sel_background_corner_bottomLeft" />
+        <attr name="sel_background_corner_bottomRight" />
+        <attr name="sel_background_border_color" />
+        <attr name="sel_background_border_width" />
+        <attr name="sel_background_border_pressed" />
+        <attr name="sel_background_border_selected" />
+        <attr name="sel_background_border_disable" />
+        <attr name="sel_background_ripple" />
+        <attr name="sel_background_ripple_mask" />
+        <attr name="sel_background_ripple_mask_shape" />
+        <attr name="sel_background_ripple_mask_corners" />
+        <attr name="sel_background_ripple_mask_corner_topLeft" />
+        <attr name="sel_background_ripple_mask_corner_topRight" />
+        <attr name="sel_background_ripple_mask_corner_bottomLeft" />
+        <attr name="sel_background_ripple_mask_corner_bottomRight" />
+    </declare-styleable>
+
+</resources>

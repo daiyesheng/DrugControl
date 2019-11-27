@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="45"
+        android:endColor="@color/btn_color_normal"
+        android:startColor="@color/btn_color_normal" />
+
+    <solid android:color="@color/btn_color_normal" />
+
+    <stroke
+        android:width="1dp"
+        android:color="@color/btn_color_normal" />
+
+    <corners
+        android:bottomLeftRadius="@dimen/btn_corner_radius"
+        android:bottomRightRadius="@dimen/btn_corner_radius"
+        android:topLeftRadius="@dimen/btn_corner_radius"
+        android:topRightRadius="@dimen/btn_corner_radius" />
+
+</shape>

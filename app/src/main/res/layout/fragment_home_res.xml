@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_psy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/item_corer_shadow_selector"
+            app:layout_constraintDimensionRatio="2.8:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_140"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                style="@style/layout_allWraped_style"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/item_tv_style"
+                    android:layout_gravity="left"
+                    android:text="@string/psychological"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/item_tv_third_style"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:text="@string/psychological_en" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_medical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/item_corer_shadow_selector"
+            app:layout_constraintDimensionRatio="2.8:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_psy">
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_140"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                style="@style/layout_allWraped_style"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/item_tv_style"
+                    android:layout_gravity="left"
+                    android:text="@string/medical"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/item_tv_third_style"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:text="@string/medical_en" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_legal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/item_corer_shadow_selector"
+            app:layout_constraintDimensionRatio="2.8:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_medical">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_140"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                style="@style/layout_allWraped_style"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/item_tv_style"
+                    android:layout_gravity="left"
+                    android:text="@string/legal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/item_tv_third_style"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:text="@string/legal_en" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_worker"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/item_corer_shadow_selector"
+            app:layout_constraintDimensionRatio="2.8:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_legal">
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_140"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                style="@style/layout_allWraped_style"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv4"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/item_tv_style"
+                    android:layout_gravity="left"
+                    android:text="@string/social_worker"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/item_tv_third_style"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:text="@string/social_worker_en" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_de"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/item_corer_shadow_selector"
+            app:layout_constraintDimensionRatio="2.8:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_worker">
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginRight="@dimen/dp_140"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                style="@style/layout_allWraped_style"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv5"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/item_tv_style"
+                    android:layout_gravity="left"
+                    android:text="@string/social_worker"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/item_tv_third_style"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:text="@string/social_worker_en" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

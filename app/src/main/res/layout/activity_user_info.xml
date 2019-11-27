@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.UserInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <FrameLayout
+            android:id="@+id/fl_name"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/user_name"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_phone"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/connect_phone"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_age"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/age"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_sex"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/sex"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_register"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/register"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_address"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/address"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_education"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14"
+            android:layout_marginBottom="@dimen/dp_20">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/education"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

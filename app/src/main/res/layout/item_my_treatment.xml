@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_widthfilled_style"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_4"
+    android:layout_marginRight="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:background="@drawable/item_stroke_selector"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tvProject"
+        style="@style/item_tv_second_style"
+        android:layout_centerHorizontal="true"
+        tools:text="心里咨询" />
+
+    <FrameLayout
+        android:id="@+id/fl1"
+        style="@style/layout_widthfilled_style"
+        android:layout_below="@+id/tvProject"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            style="@style/item_tv_forth_style"
+            android:layout_gravity="left|top"
+            android:text="@string/patient" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            style="@style/item_tv_normal_style"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/dp_64"
+            tools:text="赵成瑞 28岁 男" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl2"
+        style="@style/layout_widthfilled_style"
+        android:layout_below="@+id/fl1"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            style="@style/item_tv_forth_style"
+            android:layout_gravity="left|top"
+            android:text="@string/consultation_descript"/>
+
+        <TextView
+            android:id="@+id/tvDes"
+            style="@style/item_tv_normal_style"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/dp_64"
+            tools:text="心理疾病及疑似吸毒心理抑郁等相关疾
+病及咨询服务；心理疾病及疑似吸毒心
+理抑郁等相关疾病及咨询服务。" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl3"
+        style="@style/layout_widthfilled_style"
+        android:layout_below="@+id/fl2"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            style="@style/item_tv_forth_style"
+            android:layout_gravity="left|top"
+            android:text="@string/doctor_suggest" />
+
+        <TextView
+            android:id="@+id/tvSuggest"
+            style="@style/item_tv_normal_style"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/dp_64"
+            tools:text="心理疾病及疑似吸毒心理抑郁等相关疾
+病及咨询服务；心理疾病及疑似吸毒心
+理抑郁等相关疾病及咨询服务；千万不
+要有侥幸心理，认为自己身体素质好，
+排毒快，就认为自己肯定没事了。但是
+这不是你说了算的，是毒品尿检板说了
+算的。" />
+    </FrameLayout>
+
+    <FrameLayout
+        style="@style/layout_widthfilled_style"
+        android:layout_below="@+id/fl3"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <TextView
+            style="@style/item_tv_forth_style"
+            android:layout_gravity="left|center_vertical"
+            android:text="@string/consultation_date" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            style="@style/item_tv_normal_style"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="@dimen/dp_64"
+            tools:text="2019.08.15 15:30" />
+    </FrameLayout>
+
+
+</RelativeLayout>

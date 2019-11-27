@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!-- 下载提示 -->
+    <string name="notif_down_file">下载中...</string>
+    <string name="down_loading">正在后台下载...</string>
+    <string name="down_loading_fin">后台下载下载完成，请点击安装</string>
+    <string name="down_loading_fail">后台下载失败</string>
+    <string name="downloadProgress">当前下载进度</string>
+    <string name="downloadSuccess">下载完成</string>
+    <string name="downloadFailure">下载失败</string>
+    <string name="update_title">版本更新</string>
+</resources>

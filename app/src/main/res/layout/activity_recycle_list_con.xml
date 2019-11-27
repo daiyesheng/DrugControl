@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_allFilled_style"
+    android:id="@id/srlBaseHttpRecycler"
+    tools:context=".ui.activity.RecycleListConActivity"
+    android:background="@color/white"
+    app:srlEnableAutoLoadMore="true"
+    app:srlEnablePreviewInEditMode="true"
+    >
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        style="@style/layout_widthfilled_style"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvBaseRecycler"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        style="@style/layout_allFilled_style"
+        />
+
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        style="@style/layout_widthfilled_style"
+        />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

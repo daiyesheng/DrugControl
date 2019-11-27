@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SettingMachineActivity">
+
+    <RelativeLayout
+        style="@style/item_layout"
+        android:layout_marginTop="@dimen/layout_Margin_10"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_14"
+        android:paddingRight="@dimen/dp_14">
+
+        <CheckBox
+            android:id="@+id/cbVoice"
+            style="@style/checkbox"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_Margin_10" />
+
+        <TextView
+            style="@style/item_tv_third_style"
+            android:layout_centerVertical="true"
+            android:text="@string/voice_wakeup"
+            android:textColor="@color/item_tv_color_01" />
+
+        <TextView
+            style="@style/item_tv_forth_style"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_toLeftOf="@+id/cbVoice"
+            android:text="@string/closed" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/item_tv_third_style"
+        android:layout_gravity="left"
+        android:lineSpacingExtra="@dimen/dp_6"
+        android:paddingLeft="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_10"
+        android:singleLine="false"
+        android:text="@string/voice_setting_notice" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_marginBottom="@dimen/dp_10" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="demo">
+        <item>demo</item>
+        <item>demo</item>
+    </string-array>
+
+    <string-array name="my_expert_tab_status">
+        <item>所有</item>
+        <item>收藏</item>
+        <item>已预约</item>
+        <item>已就诊</item>
+    </string-array>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        style="@style/layout_allFilled_style"
+        android:orientation="vertical">
+
+        <FrameLayout
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/layout_Margin_10"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <CheckBox
+                android:id="@+id/cbNotice"
+                style="@style/checkbox"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/layout_Margin_10" />
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/new_msg_notice"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_unlock"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/unlock_ways"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_cache"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/clear_cache"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_version"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_forth_style"
+                android:text="@string/version_update_tips"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/dp_40" />
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/version_update"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_policy"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/policy_privacy"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_feedback"
+            style="@style/item_layout"
+            android:layout_height="@dimen/dp_50"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14"
+            android:layout_marginBottom="@dimen/dp_20">
+            <ImageView
+                style="@style/arrows"
+                android:layout_marginRight="@dimen/layout_Margin_10"
+                android:layout_gravity="center_vertical|right"/>
+            <TextView
+                style="@style/item_tv_third_style"
+                android:text="@string/sugession_feedback"
+                android:layout_gravity="center_vertical|left"
+                android:textColor="@color/item_tv_color_01" />
+            <View
+                style="@style/line_style"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <Button
+            style="@style/btn_style"
+            android:layout_width="@dimen/dp_240"
+            android:text="@string/logout"
+            android:layout_margin="@dimen/dp_30"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

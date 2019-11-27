@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="675dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#33666666" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:clipChildren="false">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:layout_gravity="bottom|center"
+            android:background="@color/windowBackground"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 这里直接给其设置高度 让其超过父亲布局的56dp-->
+
+            <RadioButton
+                android:id="@+id/rb_res"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_bg_window_selector"
+                android:button="@null"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/resource"
+                android:textColor="@drawable/home_tv_check_selector" />
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:enabled="false"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/counselor"
+                android:textColor="@drawable/home_tv_check_selector" />
+
+
+            <RadioButton
+                android:id="@+id/rb_me"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_bg_window_selector"
+                android:button="@null"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/mine"
+                android:textColor="@drawable/home_tv_check_selector" />
+
+        </RadioGroup>
+
+        <com.example.drugcontrol.widget.MaskImageView
+            android:id="@+id/rbAdd"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-24dp"
+            android:adjustViewBounds="true"
+            app:miv_mask_color="@color/black_35"
+            android:src="@drawable/comui_tab_post" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

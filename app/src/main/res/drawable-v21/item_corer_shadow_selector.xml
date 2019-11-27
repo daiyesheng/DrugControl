@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/black_25"><!--点击时波纹的颜色-->
+<!--    <item android:drawable="@drawable/item_bg_corner_shape" />&lt;!&ndash;未点击时控件的颜色&ndash;&gt;-->
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:left="4dp" android:top="4dp">
+                <shape>
+                    <solid android:color="@color/windowBackground" />
+                    <corners android:radius="@dimen/dp_10"/>
+                    <stroke android:width="@dimen/dp_0_5" android:color="@color/windowBackground" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- SHADOW LAYER -->
+            <item android:left="4dp" android:top="4dp"  >
+
+                <shape>
+                    <solid android:color="@color/windowBackground" />
+                    <corners android:radius="@dimen/dp_10"/>
+                    <stroke android:width="@dimen/dp_0_5" android:color="@color/windowBackground" />
+                </shape>
+            </item>
+            <!-- CONTENT LAYER -->
+            <item android:bottom="4dp" android:right="4dp">
+                <shape>
+                    <solid android:color="@color/white" />
+                    <corners android:radius="@dimen/dp_10"/>
+                    <stroke android:width="2dp" android:color="@color/windowBackground" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</ripple>

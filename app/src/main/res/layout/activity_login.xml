@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_allFilled_style"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context=".ui.activity.LoginActivity">
+
+    <LinearLayout
+        style="@style/layout_allFilled_style"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnIgnore"
+            style="@style/btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_32"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/tv_default_selector"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="@string/ignore_login" />
+
+        <TextView
+            style="@style/item_tv_style"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:text="@string/platform_name"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/item_tv_second_style"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="@string/phone_login" />
+
+        <com.example.drugcontrol.widget.ClearEditText
+            android:id="@+id/etAccount"
+            style="@style/item_ed_style"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:drawableLeft="@drawable/ic_phonenumber"
+            android:hint="@string/hint_input_account"
+            android:inputType="number"
+            android:maxLength="11"
+            app:compoundDrawableHeight="@dimen/dp_20"
+            app:compoundDrawableWidth="@dimen/dp_20"
+            app:edittext_clear_icon="true"
+            app:edittext_underline="true"
+            app:edittext_underline_color="@color/line_color" />
+
+        <FrameLayout
+            android:id="@+id/llMsg"
+            style="@style/layout_widthfilled_style"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_30">
+
+            <com.example.drugcontrol.widget.ClearEditText
+                android:id="@+id/edMsgCode"
+                style="@style/item_ed_style"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/ic_verificationcode"
+                android:hint="@string/hint_input_msgcode"
+                android:inputType="number"
+                android:maxLength="6"
+                app:compoundDrawableHeight="@dimen/dp_20"
+                app:compoundDrawableWidth="@dimen/dp_20"
+                app:edittext_clear_icon="false"
+                app:edittext_underline="true"
+                app:edittext_underline_color="@color/line_color" />
+
+            <TextView
+                android:id="@+id/btnMsgCode"
+                style="@style/btn_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/tv_default_selector"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="@string/get_msgcode" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/btn_style"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="@string/login" />
+
+        <Button
+            android:id="@+id/btnRegiste"
+            style="@style/btn_style"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@drawable/btn_corner_selector"
+            android:text="@string/registe" />
+
+
+        <LinearLayout
+            style="@style/layout_widthfilled_style"
+            android:layout_marginTop="@dimen/dp_50"
+            android:gravity="center">
+
+            <View
+                style="@style/line_style"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_4"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/item_tv_forth_style"
+                android:text="@string/third_account_login" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout_widthfilled_style"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/llLoginByWechat"
+                style="@style/layout_allWraped_style"
+                android:padding="@dimen/dp_6"
+                android:background="@drawable/item_bg_default_selector"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:src="@drawable/ic_wechat" />
+
+                <TextView
+                    style="@style/item_tv_forth_style"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="@string/login_wechat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLoginByQQ"
+                style="@style/layout_allWraped_style"
+                android:padding="@dimen/dp_6"
+                android:background="@drawable/item_bg_default_selector"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:src="@drawable/ic_qq" />
+
+                <TextView
+                    style="@style/item_tv_forth_style"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="@string/login_qq" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
