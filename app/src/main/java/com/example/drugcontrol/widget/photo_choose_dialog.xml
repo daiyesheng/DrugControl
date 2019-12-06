@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_allFilled_style"
+    android:background="@color/transparentColor"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/layout_widthfilled_style"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bt_camara"
+            style="@style/item_layout"
+            android:gravity="center"
+            android:text="拍摄照片"
+            android:textColor="@color/item_tv_color_01"
+            android:textSize="16dp" />
+
+        <View style="@style/line_style" />
+
+        <TextView
+            android:id="@+id/bt_photo"
+            style="@style/item_layout"
+            android:gravity="center"
+            android:text="从手机中选择照片"
+            android:textColor="@color/item_tv_color_01"
+            android:textSize="16dp" />
+
+        <View
+            style="@style/line_style"
+            android:layout_height="@dimen/layout_Margin_10"
+            android:background="@color/colorWindowBackground" />
+
+        <TextView
+            android:id="@+id/bt_cancle"
+            style="@style/item_layout"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/item_tv_color_01"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</LinearLayout>
